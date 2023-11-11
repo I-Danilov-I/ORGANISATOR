@@ -1,5 +1,5 @@
 <resources>
-    <style name="Theme.Organisator" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Organisator" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <item name="colorPrimary">@color/turkis</item>
     </style>
 </resources>
