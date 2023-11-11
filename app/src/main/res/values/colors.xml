@@ -2,5 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="turkis">#00BCD4</color>
+    <color name="myAppColor">#00BCD4</color>
+    <color name="myTextColor">#D40000</color>
 </resources>

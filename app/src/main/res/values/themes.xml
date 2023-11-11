@@ -1,5 +1,13 @@
 <resources>
     <style name="Theme.Organisator" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <item name="colorPrimary">@color/turkis</item>
+        <item name="colorPrimary">@color/myAppColor</item>
     </style>
+
+    <!-- Stil für alle TextViews -->
+    <style name="MyTextViewStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/myTextColor</item>
+        <item name="android:textSize">18sp</item>
+        <!-- Fügen Sie hier weitere Attribute hinzu -->
+    </style>
+
 </resources>
