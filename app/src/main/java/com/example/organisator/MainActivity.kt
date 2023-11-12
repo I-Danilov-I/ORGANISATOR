@@ -12,27 +12,29 @@ class MainActivity : AppCompatActivity() {
     private lateinit var liste: MutableList<String>
     private lateinit var adapter: ArrayAdapter<String>
     private lateinit var listDataManager: ListDataManager
+    private lateinit var soundManager: SoundManager  // Deklarieren Sie soundManager hier
 
-    // Die Methode onCreate wird aufgerufen, wenn die Aktivität erstellt wird
+    // In Ihrer MainActivity
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Speichern und Laden
         listDataManager = ListDataManager(this)
+        soundManager = SoundManager(this)  // Erstellen Sie eine Instanz von SoundManager
 
-        // Initialisierung der Liste und des Adapters
         liste = mutableListOf("Äpfel", "Birnen", "Eier")
-
-        // Laden der gespeicherten Liste
         liste = listDataManager.readList()
 
         adapter = MyAdapter(this, liste)
 
-        // Aufruf der Setup-Methoden
-        AnimationSetup(this).setupAnimation()  // Einrichten der Animation
-        ListSetup(this, liste, adapter).setupList()  // Einrichten der Liste
-        ButtonSetup(this, liste, adapter).setupButtons()  // Einrichten der Buttons
+        AnimationSetup(this).setupAnimation()
+        ListSetup(this, liste, adapter).setupList()
+        ButtonSetup(
+            this,
+            liste,
+            adapter,
+            soundManager
+        ).setupButtons()  // Übergeben Sie soundManager hier
     }
 
     override fun onPause() {

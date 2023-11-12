@@ -8,7 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.ArrayAdapter
 
 // Definieren Sie die ButtonSetup-Klasse
-class ButtonSetup(private val activity: AppCompatActivity, private val liste: MutableList<String>, private val adapter: ArrayAdapter<String>) {
+// Definieren Sie die ButtonSetup-Klasse
+class ButtonSetup(private val activity: AppCompatActivity, private val liste: MutableList<String>, private val adapter: ArrayAdapter<String>, private val soundManager: SoundManager) {
     // Methode zum Einrichten der Buttons
     fun setupButtons() {
         // Finden Sie den settingsButton und setzen Sie die Animation
@@ -19,6 +20,10 @@ class ButtonSetup(private val activity: AppCompatActivity, private val liste: Mu
         // Finden Sie den addButton und setzen Sie den OnClickListener
         val addButton = activity.findViewById<ImageButton>(R.id.addButton)
         addButton.setOnClickListener {
+
+            // Spielen Sie den Sound ab
+            soundManager.playSound()
+
             // Finden Sie das textEingabe-Feld und holen Sie den eingegebenen Text
             val textEingabe = activity.findViewById<EditText>(R.id.TextEingabe)
             val eingabeText = textEingabe.text.toString()
