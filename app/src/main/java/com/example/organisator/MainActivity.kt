@@ -28,13 +28,8 @@ class MainActivity : AppCompatActivity() {
         adapter = MyAdapter(this, liste)
 
         AnimationSetup(this).setupAnimation()
-        ListSetup(this, liste, adapter).setupList()
-        ButtonSetup(
-            this,
-            liste,
-            adapter,
-            soundManager
-        ).setupButtons()  // Übergeben Sie soundManager hier
+        ListSetup(this, liste, adapter, soundManager).setupList()
+        ButtonSetup(this, liste, adapter, soundManager).setupButtons()  // Übergeben Sie soundManager hier
     }
 
     override fun onPause() {
