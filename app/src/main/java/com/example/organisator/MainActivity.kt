@@ -44,15 +44,6 @@ class MainActivity : AppCompatActivity() {
         settingsButton.startAnimation(setbuttonanimation)
 
 
-        // Hinzufüge Button
-        val addButton = findViewById<ImageButton>(R.id.addButton)
-        addButton.setOnClickListener {
-            // Fügen Sie hier den Eintrag zur Liste hinzu
-            liste.add("Neuer Eintrag")
-            // Benachrichtigen Sie den Adapter, dass sich die Daten geändert haben
-            adapter.notifyDataSetChanged()
-        }
-
         // Sobal das Textfeld zur Eingabe angeklickt wird, bereits stehen TExt löschen
         val textEingabe = findViewById<EditText>(R.id.TextEingabe)
         textEingabe.setOnFocusChangeListener { v, hasFocus ->
@@ -63,7 +54,24 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        // Hinzufüge Button
+        val addButton = findViewById<ImageButton>(R.id.addButton)
+        addButton.setOnClickListener {
+            // Abrufen des Texts aus dem EditText-Feld
+            val eingabeText = textEingabe.text.toString()
+            // Überprüfen, ob der Text nicht leer ist
+            if (eingabeText.isNotEmpty()) {
+                // Fügen Sie den eingegebenen Text zur Liste hinzu
+                liste.add(eingabeText)
+                // Löschen Sie den Text im EditText-Feld
+                textEingabe.text.clear()
+                // Benachrichtigen Sie den Adapter, dass sich die Daten geändert haben
+                adapter.notifyDataSetChanged()
+            }
+        }
+
     }
+
 
     inner class MyAdapter(context: Context, liste: List<String>) : ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, liste) {
 
