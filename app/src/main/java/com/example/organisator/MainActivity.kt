@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         listView.adapter = adapter
 
         // Set Button begeung
-        val settingsButton = findViewById<ImageButton>(R.id.imageButton)
+        val settingsButton = findViewById<ImageButton>(R.id.set_button)
         val setbuttonanimation = AnimationUtils.loadAnimation(this, R.anim.set_button)
         settingsButton.startAnimation(setbuttonanimation)
 
