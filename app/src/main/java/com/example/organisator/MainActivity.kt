@@ -26,20 +26,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Aufruf der Setup-Methoden
-        setupAnimation()
+        AnimationSetup(this).setupAnimation()
         setupList()
         setupButtons()
     }
 
-    // Methode zum Einrichten der Animation
-    private fun setupAnimation() {
-        // Finden Sie das TextView-Element und laden Sie die Animation
-        val textanimation = findViewById<TextView>(R.id.textView)
-        val animation = AnimationUtils.loadAnimation(this, R.anim.floating_text)
-
-        // Starten Sie die Animation
-        textanimation.startAnimation(animation)
-    }
 
     // Methode zum Einrichten der Liste
     private fun setupList() {
