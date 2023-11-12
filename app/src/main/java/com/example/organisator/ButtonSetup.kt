@@ -10,7 +10,10 @@ import android.os.Handler
 import android.os.Looper
 
 // Definieren Sie die ButtonSetup-Klasse
-class ButtonSetup(private val activity: AppCompatActivity, private val liste: MutableList<String>, private val adapter: ArrayAdapter<String>, private val soundManager: SoundManager) {
+class ButtonSetup(private val activity: AppCompatActivity,
+                  private val liste: MutableList<String>,
+                  private val adapter: ArrayAdapter<String>,
+                  private val soundManager: SoundManager) {
     // Methode zum Einrichten der Buttons
     fun setupButtons() {
         // Finden Sie den settingsButton und setzen Sie die Animation
@@ -24,6 +27,7 @@ class ButtonSetup(private val activity: AppCompatActivity, private val liste: Mu
 
             // Spielen Sie den Sound ab
             soundManager.playSound(R.raw.sound_file_add)
+
 
             // Erstellen Sie einen Handler und verwenden Sie postDelayed
             Handler(Looper.getMainLooper()).postDelayed({
