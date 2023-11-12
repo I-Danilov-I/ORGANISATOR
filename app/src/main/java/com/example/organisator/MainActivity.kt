@@ -73,6 +73,8 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+
+    // Farbe für Die Listen einträge ändern für die Ausgabe
     inner class MyAdapter(context: Context, liste: List<String>) : ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, liste) {
 
         override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
