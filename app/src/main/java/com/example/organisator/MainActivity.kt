@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         listView.adapter = adapter
 
         // Beim langem Drücken auf einen Eintrag wird er gelöscht
-        listView.setOnItemLongClickListener { parent, view, position, id ->
+        listView.setOnItemLongClickListener { _, _, position, _ ->
             // Entfernen Sie den Eintrag an der angeklickten Position aus der Liste
             liste.removeAt(position)
             // Benachrichtigen Sie den Adapter, dass sich die Daten geändert haben
