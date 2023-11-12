@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.ArrayAdapter
+import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ListView
 import android.widget.TextView
@@ -29,7 +30,6 @@ class MainActivity : AppCompatActivity() {
 
         // Erstelle eine veränderliche Liste
         val liste = mutableListOf("Äpfel", "Birnen", "Eier")
-        liste.add("Wasser")
 
         // Erstelle einen ArrayAdapter
         val adapter = MyAdapter(this, liste)
@@ -53,11 +53,17 @@ class MainActivity : AppCompatActivity() {
             adapter.notifyDataSetChanged()
         }
 
+        // Sobal das Textfeld zur Eingabe angeklickt wird, bereits stehen TExt löschen
+        val textEingabe = findViewById<EditText>(R.id.TextEingabe)
+        textEingabe.setOnFocusChangeListener { v, hasFocus ->
+            if (hasFocus) {
+                // Löschen Sie den Text, wenn das EditText-Element den Fokus erhält
+                (v as EditText).text.clear()
+            }
+        }
 
 
     }
-
-
 
     inner class MyAdapter(context: Context, liste: List<String>) : ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, liste) {
 

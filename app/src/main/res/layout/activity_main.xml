@@ -52,6 +52,23 @@
 
     </ListView>
 
+    <EditText
+        android:id="@+id/TextEingabe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="@string/eingabeTextBeschreibung"
+        android:textColor="#00BCD4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/addButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ListView"
+        tools:ignore="LabelFor,VisualLintTextFieldSize" />
+
     <ImageButton
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
@@ -62,6 +79,7 @@
         android:src="@android:drawable/btn_star"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
