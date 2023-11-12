@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.ArrayAdapter
+import android.widget.ImageButton
 import android.widget.ListView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -36,6 +37,13 @@ class MainActivity : AppCompatActivity() {
         // Finde die ListView und setze den Adapter
         val listView = findViewById<ListView>(R.id.ListView)
         listView.adapter = adapter
+
+        // Set Button begeung
+        val settingsButton = findViewById<ImageButton>(R.id.imageButton)
+        val setbuttonanimation = AnimationUtils.loadAnimation(this, R.anim.set_button)
+        settingsButton.startAnimation(setbuttonanimation)
+
+
     }
 
     inner class MyAdapter(context: Context, liste: List<String>) : ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, liste) {
