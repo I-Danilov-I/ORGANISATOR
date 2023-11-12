@@ -76,7 +76,6 @@
         android:background="@mipmap/ic_launcher_foreground"
         android:foreground="@mipmap/ic_launcher_foreground"
         android:importantForAccessibility="no"
-        android:src="@android:drawable/btn_star"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
