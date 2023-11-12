@@ -1,6 +1,5 @@
 package com.example.organisator
 
-import MyAdapter
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
