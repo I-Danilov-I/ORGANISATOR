@@ -38,6 +38,15 @@ class MainActivity : AppCompatActivity() {
         val listView = findViewById<ListView>(R.id.ListView)
         listView.adapter = adapter
 
+        // Beim langem Drücken auf einen Eintrag wird er gelöscht
+        listView.setOnItemLongClickListener { parent, view, position, id ->
+            // Entfernen Sie den Eintrag an der angeklickten Position aus der Liste
+            liste.removeAt(position)
+            // Benachrichtigen Sie den Adapter, dass sich die Daten geändert haben
+            adapter.notifyDataSetChanged()
+            true
+        }
+
         // Set Button begeung
         val settingsButton = findViewById<ImageButton>(R.id.set_button)
         val setbuttonanimation = AnimationUtils.loadAnimation(this, R.anim.set_button)
