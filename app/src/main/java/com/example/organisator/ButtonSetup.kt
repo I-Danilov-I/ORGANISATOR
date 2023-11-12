@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.ArrayAdapter
 
 // Definieren Sie die ButtonSetup-Klasse
-// Definieren Sie die ButtonSetup-Klasse
 class ButtonSetup(private val activity: AppCompatActivity, private val liste: MutableList<String>, private val adapter: ArrayAdapter<String>, private val soundManager: SoundManager) {
     // Methode zum Einrichten der Buttons
     fun setupButtons() {
