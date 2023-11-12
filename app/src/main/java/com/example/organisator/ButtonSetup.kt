@@ -23,7 +23,7 @@ class ButtonSetup(private val activity: AppCompatActivity, private val liste: Mu
         addButton.setOnClickListener {
 
             // Spielen Sie den Sound ab
-            soundManager.playSound()
+            soundManager.playSound(R.raw.sound_file_add)
 
             // Erstellen Sie einen Handler und verwenden Sie postDelayed
             Handler(Looper.getMainLooper()).postDelayed({

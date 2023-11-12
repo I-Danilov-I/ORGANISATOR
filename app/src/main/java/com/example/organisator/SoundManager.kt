@@ -4,8 +4,8 @@ import android.content.Context
 import android.media.MediaPlayer
 
 class SoundManager(private val context: Context) {
-    fun playSound() {
-        val mediaPlayer = MediaPlayer.create(context, R.raw.sound_file_add)
+    fun playSound(soundfile: Int) {
+        val mediaPlayer = MediaPlayer.create(context, soundfile)
         mediaPlayer.start()
     }
 }
