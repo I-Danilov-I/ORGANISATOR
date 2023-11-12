@@ -1,7 +1,6 @@
 package com.example.organisator
 
 import android.content.Context
-import android.graphics.Color
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.View
@@ -12,6 +11,7 @@ import android.widget.ImageButton
 import android.widget.ListView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
 
@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             val textView = view.findViewById<TextView>(android.R.id.text1)
 
             // Ändern Sie hier die Farbe
-            textView.setTextColor(Color.RED)  // Setzen Sie hier die gewünschte Farbe ein
+            textView.setTextColor(ContextCompat.getColor(context, R.color.colorTextListe))
 
             // Ändern Sie hier die Schriftgröße
             textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20f)  // Setzen Sie hier die gewünschte Schriftgröße ein

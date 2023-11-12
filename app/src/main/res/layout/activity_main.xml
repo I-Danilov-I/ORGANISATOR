@@ -30,10 +30,10 @@
 
         android:layout_marginStart="10dp"
         android:fontFamily="sans-serif-medium"
-        android:shadowColor="@color/black"
+        android:shadowColor="@color/colorTitelSchatten"
         android:shadowRadius="20"
         android:text="@string/titel_text"
-        android:textColor="@color/colorAccent"
+        android:textColor="#4D4946"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
@@ -43,8 +43,8 @@
 
     <ImageButton
         android:id="@+id/set_button"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="64dp"
         android:layout_marginEnd="10dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/einstellungs_button_beschreibung"
@@ -53,7 +53,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="@+id/toolbar"
-        tools:ignore="RedundantDescriptionCheck" />
+        tools:ignore="RedundantDescriptionCheck,TouchTargetSizeCheck,VisualLintBounds" />
 
     <ListView
         android:id="@+id/ListView"
