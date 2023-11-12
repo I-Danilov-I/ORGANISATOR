@@ -6,17 +6,25 @@ import android.os.Bundle
 import android.util.TypedValue
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var textView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Ersetzen Sie dies durch die ID Ihres ImageView-Elements
+        val textanimation = findViewById<TextView>(R.id.textView)
+        // Laden Sie die Animation
+        val animation = AnimationUtils.loadAnimation(this, R.anim.floating_text)
+
+        // Starten Sie die Animation
+        textanimation.startAnimation(animation)
 
         // Erstelle eine veränderliche Liste
         val liste = mutableListOf("Äpfel", "Birnen", "Eier")
@@ -30,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         listView.adapter = adapter
     }
 
-    inner class MyAdapter(context: Context, private val liste: List<String>) : ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, liste) {
+    inner class MyAdapter(context: Context, liste: List<String>) : ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, liste) {
 
         override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
             val view = super.getView(position, convertView, parent)
