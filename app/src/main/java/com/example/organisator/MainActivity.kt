@@ -44,7 +44,20 @@ class MainActivity : AppCompatActivity() {
         settingsButton.startAnimation(setbuttonanimation)
 
 
+        // Hinzufüge Button
+        val addButton = findViewById<ImageButton>(R.id.addButton)
+        addButton.setOnClickListener {
+            // Fügen Sie hier den Eintrag zur Liste hinzu
+            liste.add("Neuer Eintrag")
+            // Benachrichtigen Sie den Adapter, dass sich die Daten geändert haben
+            adapter.notifyDataSetChanged()
+        }
+
+
+
     }
+
+
 
     inner class MyAdapter(context: Context, liste: List<String>) : ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, liste) {
 
