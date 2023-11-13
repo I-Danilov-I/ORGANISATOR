@@ -11,8 +11,8 @@
         android:fullBackupContent="@xml/backup_rules"
         android:label="@string/app_name"
 
-        android:icon="@mipmap/app_icon"
-        android:roundIcon="@mipmap/app_icon_round"
+        android:icon="@mipmap/app_icon_foreground"
+        android:roundIcon="@mipmap/app_icon_foreground"
 
         android:supportsRtl="true"
         android:theme="@style/Theme.Organisator"
