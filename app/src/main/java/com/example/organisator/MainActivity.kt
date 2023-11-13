@@ -19,6 +19,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Tägliche Benachrichtigung
+        DailyNotificationManager(this).setupDailyNotification()
+
         // Erstellen Sie eine Instanz von ListDataManager und SoundManager
         listDataManager = ListDataManager(this)
         soundManager = SoundManager(this)  // Erstellen Sie eine Instanz von SoundManager
