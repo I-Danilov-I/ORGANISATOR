@@ -18,7 +18,7 @@ class MyAdapter(context: Context, liste: List<String>) : ArrayAdapter<String>(co
 
         // Ändern Sie die Farbe und die Schriftgröße des Texts
         textView.setTextColor(ContextCompat.getColor(context, R.color.colorTextListe))
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 28f)
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 24f)
 
         return view
     }

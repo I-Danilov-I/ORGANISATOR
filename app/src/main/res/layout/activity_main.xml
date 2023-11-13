@@ -62,13 +62,13 @@
         android:inputType="text"
         android:minHeight="48dp"
         android:text="@string/eingabeTextBeschreibung"
-        android:textColor="#00BCD4"
+        android:textColor="@color/colorEingabeText"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/addButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ListView"
-        tools:ignore="LabelFor,VisualLintTextFieldSize" />
+        tools:ignore="VisualLintTextFieldSize" />
 
     <ImageButton
         android:id="@+id/addButton"
