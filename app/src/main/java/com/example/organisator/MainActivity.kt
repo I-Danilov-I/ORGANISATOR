@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         TestNotificationManager(this).sendTestNotification()
 
         // Tägliche Benachrichtigung
-        // DailyNotificationManager(this).setupDailyNotification()
+        DailyNotificationManager(this).setupDailyNotification()
 
         // Erstellen Sie eine Instanz von ListDataManager und SoundManager
         listDataManager = ListDataManager(this)
