@@ -86,8 +86,8 @@
 
     <ImageButton
         android:id="@+id/set_button"
-        android:layout_width="67dp"
-        android:layout_height="67dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginEnd="10dp"
 
         android:background="#00FFFFFF"
