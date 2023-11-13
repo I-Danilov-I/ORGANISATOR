@@ -74,8 +74,10 @@
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@mipmap/ic_launcher_foreground"
-        android:foreground="@mipmap/ic_launcher_foreground"
+
+        android:background="@mipmap/add_icon_foreground"
+        android:foreground="@mipmap/add_icon_foreground"
+
         android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,17 +86,20 @@
 
     <ImageButton
         android:id="@+id/set_button"
-        android:layout_width="80dp"
-        android:layout_height="64dp"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
         android:layout_marginEnd="10dp"
-        android:background="#0000DDCB"
+
+        android:background="#00FFFFFF"
         android:contentDescription="@string/einstellungs_button_beschreibung"
+
+        android:foreground="@mipmap/set_icon_foreground"
         android:scaleType="fitEnd"
-        android:src="@mipmap/set_button_img_foreground"
+        android:src="@mipmap/set_icon_foreground"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="@+id/toolbar"
-        tools:ignore="RedundantDescriptionCheck,TouchTargetSizeCheck,VisualLintBounds" />
+        tools:ignore="RedundantDescriptionCheck,TouchTargetSizeCheck,VisualLintBounds,ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

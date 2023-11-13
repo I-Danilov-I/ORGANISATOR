@@ -17,9 +17,9 @@ class TestNotificationManager(private val context: Context) {
         }
 
         val notification = NotificationCompat.Builder(context, "default")
-            .setContentTitle("Testbenachrichtigung")
-            .setContentText("Dies ist eine Testbenachrichtigung!")
-            .setSmallIcon(android.R.drawable.ic_menu_today)
+            .setContentTitle("Test")
+            .setContentText("Hier sind Ihre heutigen Einträge!")
+            .setSmallIcon(R.mipmap.app_icon_round)
             .build()
 
         notificationManager.notify(1, notification)

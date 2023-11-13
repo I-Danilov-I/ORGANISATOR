@@ -21,7 +21,7 @@ class AlarmReceiver : BroadcastReceiver() {
         val notification = NotificationCompat.Builder(context, "default")
             .setContentTitle("Tägliche Erinnerung")
             .setContentText("Hier sind Ihre heutigen Einträge!")
-            .setSmallIcon(R.mipmap.ic_launcher)
+            .setSmallIcon(R.mipmap.app_icon_foreground)
             .build()
 
         notificationManager.notify(1, notification)
