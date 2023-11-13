@@ -2,6 +2,7 @@ package com.example.organisator
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -19,6 +20,8 @@ class AlarmReceiver : BroadcastReceiver() {
             notificationManager.createNotificationChannel(channel)
         }
 
+        val activityIntent = Intent(context, MainActivity::class.java)
+        val pendingIntent = PendingIntent.getActivity(context, 0, activityIntent, PendingIntent.FLAG_MUTABLE)
 
         val largeIcon = BitmapFactory.decodeResource(context.resources, R.mipmap.app_icon_foreground)
         val notification = NotificationCompat.Builder(context, "default")
@@ -26,6 +29,7 @@ class AlarmReceiver : BroadcastReceiver() {
             .setContentText("Hier sind Ihre heutigen Einträge!")
             .setSmallIcon(android.R.drawable.star_big_on)
             .setLargeIcon(largeIcon)
+            .setContentIntent(pendingIntent)
             .build()
 
         notificationManager.notify(1, notification)
