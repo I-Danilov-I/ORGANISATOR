@@ -12,7 +12,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="0dp"
-        android:layout_height="46dp"
+        android:layout_height="56dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -21,7 +21,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="VisualLintBounds" />
 
     <TextView
         android:id="@+id/textView"
@@ -31,7 +32,9 @@
         android:layout_marginStart="10dp"
         android:fontFamily="sans-serif-medium"
         android:shadowColor="@color/colorTitelSchatten"
-        android:shadowRadius="20"
+        android:shadowDx="10"
+        android:shadowDy="5"
+        android:shadowRadius="30"
         android:text="@string/titel_text"
         android:textColor="@color/colorTitelText"
         android:textSize="34sp"
@@ -39,7 +42,7 @@
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
         app:layout_constraintStart_toStartOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="@+id/toolbar"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck,VisualLintBounds" />
 
     <ListView
         android:id="@+id/ListView"
@@ -68,7 +71,7 @@
         app:layout_constraintEnd_toStartOf="@+id/addButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ListView"
-        tools:ignore="VisualLintTextFieldSize" />
+        tools:ignore="LabelFor,VisualLintTextFieldSize" />
 
     <ImageButton
         android:id="@+id/addButton"
@@ -86,8 +89,8 @@
 
     <ImageButton
         android:id="@+id/set_button"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="57dp"
+        android:layout_height="56dp"
         android:layout_marginEnd="10dp"
 
         android:background="#00FFFFFF"
@@ -99,6 +102,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="RedundantDescriptionCheck,TouchTargetSizeCheck,VisualLintBounds,ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

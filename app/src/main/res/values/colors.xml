@@ -12,6 +12,8 @@
     // Titel Text
     <color name="colorTitelText">#C2EFE9</color>
     <color name="colorTitelSchatten">#00EC1D</color>
+
+    // Listeneinträge
     <color name="colorTextListe">@color/colorTitelSchatten</color>
 
 

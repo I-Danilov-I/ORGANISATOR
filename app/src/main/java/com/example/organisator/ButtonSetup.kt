@@ -46,7 +46,7 @@ class ButtonSetup(private val activity: AppCompatActivity,
                     // Benachrichtigen Sie den Adapter, dass sich die Daten geändert haben
                     adapter.notifyDataSetChanged()
                 }
-            }, 1500) // Verzögerung von 3 Sekunden
+            }, 1000) // Verzögerung von 1 Sekunden
         }
 
         // Finden Sie das textEingabe-Feld und setzen Sie den OnFocusChangeListener

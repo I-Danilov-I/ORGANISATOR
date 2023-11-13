@@ -3,7 +3,7 @@
 <set xmlns:android="http://schemas.android.com/apk/res/android">
     <translate
         android:duration="2000"
-        android:fromYDelta="0%"
+        android:fromYDelta="10%"
         android:toYDelta="-10%"
         android:repeatCount="infinite"
         android:repeatMode="reverse" />
