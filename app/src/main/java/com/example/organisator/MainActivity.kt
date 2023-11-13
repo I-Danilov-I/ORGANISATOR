@@ -19,19 +19,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Erstellen Sie eine Instanz von ListDataManager und SoundManager
         listDataManager = ListDataManager(this)
         soundManager = SoundManager(this)  // Erstellen Sie eine Instanz von SoundManager
 
+        // Initialisieren Sie die Liste mit einigen Werten und lesen Sie die Liste aus dem ListDataManager
         liste = mutableListOf("Äpfel", "Birnen", "Eier")
         liste = listDataManager.readList()
 
+        // Erstellen Sie einen Adapter für die Liste
         adapter = MyAdapter(this, liste)
 
+        // Rufen Sie die setupAnimation-Methode der AnimationSetup-Klasse auf
         AnimationSetup(this).setupAnimation()
+        // Rufen Sie die setupList-Methode der ListSetup-Klasse auf und übergeben Sie die benötigten Parameter
         ListSetup(this, liste, adapter, soundManager).setupList()
+        // Rufen Sie die setupButtons-Methode der ButtonSetup-Klasse auf und übergeben Sie die benötigten Parameter
         ButtonSetup(this, liste, adapter, soundManager).setupButtons()  // Übergeben Sie soundManager hier
     }
 
+    // Überschreiben Sie die onPause-Methode, um die Liste zu speichern, wenn die App pausiert wird
     override fun onPause() {
         super.onPause()
         listDataManager.saveList(liste)

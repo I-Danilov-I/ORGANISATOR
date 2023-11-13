@@ -87,7 +87,7 @@
         android:layout_width="80dp"
         android:layout_height="64dp"
         android:layout_marginEnd="10dp"
-        android:background="@android:color/transparent"
+        android:background="#0000DDCB"
         android:contentDescription="@string/einstellungs_button_beschreibung"
         android:scaleType="fitEnd"
         android:src="@mipmap/set_button_img_foreground"
