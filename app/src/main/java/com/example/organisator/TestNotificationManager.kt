@@ -3,6 +3,7 @@ package com.example.organisator
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
+import android.graphics.BitmapFactory
 import android.os.Build
 import androidx.core.app.NotificationCompat
 
@@ -16,11 +17,14 @@ class TestNotificationManager(private val context: Context) {
             notificationManager.createNotificationChannel(channel)
         }
 
+        val largeIcon = BitmapFactory.decodeResource(context.resources, R.mipmap.app_icon_foreground)
         val notification = NotificationCompat.Builder(context, "default")
             .setContentTitle("Test")
             .setContentText("Hier sind Ihre heutigen Einträge!")
-            .setSmallIcon(R.mipmap.app_icon_round)
+            .setSmallIcon(R.mipmap.app_icon_foreground)
+            .setLargeIcon(largeIcon)
             .build()
+
 
         notificationManager.notify(1, notification)
     }
