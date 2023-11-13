@@ -21,7 +21,7 @@ class TestNotificationManager(private val context: Context) {
         val notification = NotificationCompat.Builder(context, "default")
             .setContentTitle("Test")
             .setContentText("Hier sind Ihre heutigen Einträge!")
-            .setSmallIcon(R.mipmap.app_icon_foreground)
+            .setSmallIcon(android.R.drawable.star_big_on)
             .setLargeIcon(largeIcon)
             .build()
 
