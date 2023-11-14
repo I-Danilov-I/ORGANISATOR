@@ -28,8 +28,8 @@ class NotificationManager(private val context: Context) {
         if (!sharedPreferences.getBoolean("dialogShown", false)) {
             AlertDialog.Builder(context)
                 .setTitle("Benachrichtigung Aktivieren")
-                .setMessage("Wir Respektieren ihre Wahl! " +
-                        "Es wird jedoch Empfolen die Benachrichtugung für diese App zu Aktivieren." +
+                .setMessage("Wir Respektieren ihre Wahl! \n" +
+                        "Es wird jedoch Empfolen die Benachrichtugung für diese App zu Aktivieren.\n\n" +
                         "Benachrichtigungseinstellungen öffnen? ")
                 .setPositiveButton("Ja") { _, _ ->
                     openNotificationSettings()
