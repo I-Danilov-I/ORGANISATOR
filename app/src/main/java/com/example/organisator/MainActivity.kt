@@ -19,14 +19,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
-        // Test Benachrigugn
-        // TestNotificationManager(this).sendTestNotification()
-
-        // Tägliche Benachrichtigung
-        DailyNotificationManager(this).setupDailyNotification()
-
         // Erstellen Sie eine Instanz von ListDataManager und SoundManager
         listDataManager = ListDataManager(this)
         soundManager = SoundManager(this)  // Erstellen Sie eine Instanz von SoundManager
@@ -45,9 +37,17 @@ class MainActivity : AppCompatActivity() {
         // Rufen Sie die setupButtons-Methode der ButtonSetup-Klasse auf und übergeben Sie die benötigten Parameter
         ButtonSetup(this, liste, adapter, soundManager).setupButtons()  // Übergeben Sie soundManager hier
 
+
+
         // Benutzer fargen ob Benachritugung ativieren
         val notificationDialogManager = NotificationManager(this)
         notificationDialogManager.showNotificationSettingsDialog()
+
+        // Test Benachrigugn
+        // TestNotificationManager(this).sendTestNotification()
+
+        // Tägliche Benachrichtigung
+        NotificationManager(this).setupDailyNotification()
     }
 
     // Überschreiben Sie die onPause-Methode, um die Liste zu speichern, wenn die App pausiert wird
