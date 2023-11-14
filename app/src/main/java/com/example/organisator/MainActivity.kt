@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         val notificationDialogManager = NotificationManager(this)
         notificationDialogManager.showNotificationSettingsDialog()
 
-        // Test Benachrigugn
+        // Test Benachritigung absenden
         // TestNotificationManager(this).sendTestNotification()
 
         // Tägliche Benachrichtigung
