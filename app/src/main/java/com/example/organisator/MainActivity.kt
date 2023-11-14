@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         // Test Benachrigugn
         // TestNotificationManager(this).sendTestNotification()
 
@@ -42,6 +44,11 @@ class MainActivity : AppCompatActivity() {
         ListSetup(this, liste, adapter, soundManager).setupList()
         // Rufen Sie die setupButtons-Methode der ButtonSetup-Klasse auf und übergeben Sie die benötigten Parameter
         ButtonSetup(this, liste, adapter, soundManager).setupButtons()  // Übergeben Sie soundManager hier
+
+        // Benutzer fargen ob Benachritugung ativieren
+        val notificationSettingsManager = NotificationSettingsManager(this)
+        val notificationDialogManager = NotificationDialogManager(this, notificationSettingsManager)
+        notificationDialogManager.showNotificationSettingsDialog()
     }
 
     // Überschreiben Sie die onPause-Methode, um die Liste zu speichern, wenn die App pausiert wird
