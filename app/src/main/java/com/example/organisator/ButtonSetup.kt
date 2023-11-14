@@ -6,10 +6,8 @@ import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.ArrayAdapter
-import android.os.Handler
-import android.os.Looper
 
-// Definieren Sie die ButtonSetup-Klasse
+
 class ButtonSetup(private val activity: AppCompatActivity,
                   private val liste: MutableList<String>,
                   private val adapter: ArrayAdapter<String>,
@@ -28,25 +26,19 @@ class ButtonSetup(private val activity: AppCompatActivity,
             // Spielen Sie den Sound ab
             soundManager.playSound(R.raw.sound_file_add)
 
+            // Finden Sie das textEingabe-Feld und holen Sie den eingegebenen Text
+            val textEingabe = activity.findViewById<EditText>(R.id.TextEingabe)
+            val eingabeText = textEingabe.text.toString()
+            // Überprüfen Sie, ob der eingegebene Text nicht leer ist
+            if (eingabeText.isNotEmpty()) {
 
-            // Erstellen Sie einen Handler und verwenden Sie postDelayed
-            Handler(Looper.getMainLooper()).postDelayed({
-                // Ihr Code hier wird nach der angegebenen Verzögerungszeit ausgeführt
-
-                // Finden Sie das textEingabe-Feld und holen Sie den eingegebenen Text
-                val textEingabe = activity.findViewById<EditText>(R.id.TextEingabe)
-                val eingabeText = textEingabe.text.toString()
-                // Überprüfen Sie, ob der eingegebene Text nicht leer ist
-                if (eingabeText.isNotEmpty()) {
-
-                    // Fügen Sie den eingegebenen Text zur Liste hinzu
-                    liste.add(eingabeText)
-                    // Löschen Sie den Text im textEingabe-Feld
-                    textEingabe.text.clear()
-                    // Benachrichtigen Sie den Adapter, dass sich die Daten geändert haben
-                    adapter.notifyDataSetChanged()
-                }
-            }, 1000) // Verzögerung von 1 Sekunden
+                // Fügen Sie den eingegebenen Text zur Liste hinzu
+                liste.add(eingabeText)
+                // Löschen Sie den Text im textEingabe-Feld
+                textEingabe.text.clear()
+                // Benachrichtigen Sie den Adapter, dass sich die Daten geändert haben
+                adapter.notifyDataSetChanged()
+            }
         }
 
         // Finden Sie das textEingabe-Feld und setzen Sie den OnFocusChangeListener

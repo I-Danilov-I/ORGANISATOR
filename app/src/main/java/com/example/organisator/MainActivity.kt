@@ -46,8 +46,7 @@ class MainActivity : AppCompatActivity() {
         ButtonSetup(this, liste, adapter, soundManager).setupButtons()  // Übergeben Sie soundManager hier
 
         // Benutzer fargen ob Benachritugung ativieren
-        val notificationSettingsManager = NotificationSettingsManager(this)
-        val notificationDialogManager = NotificationDialogManager(this, notificationSettingsManager)
+        val notificationDialogManager = NotificationManager(this)
         notificationDialogManager.showNotificationSettingsDialog()
     }
 
