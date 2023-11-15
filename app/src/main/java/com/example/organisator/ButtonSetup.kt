@@ -1,6 +1,8 @@
 // Importieren Sie die benötigten Android- und Kotlin-Bibliotheken
 package com.example.organisator
 
+import android.app.Dialog
+import android.content.Intent
 import android.view.animation.AnimationUtils
 import android.widget.EditText
 import android.widget.ImageButton
@@ -14,10 +16,24 @@ class ButtonSetup(private val activity: AppCompatActivity,
                   private val soundManager: SoundManager) {
     // Methode zum Einrichten der Buttons
     fun setupButtons() {
-        // Finden Sie den settingsButton und setzen Sie die Animation
-        val settingsButton = activity.findViewById<ImageButton>(R.id.set_button)
         val setbuttonanimation = AnimationUtils.loadAnimation(activity, R.anim.set_button)
+
+        // Finden Sie den settingsButton und setzen Sie einen OnClickListener
+        val settingsButton = activity.findViewById<ImageButton>(R.id.set_button)
+        settingsButton.setOnClickListener {
+            // Erstellen Sie einen neuen Dialog
+            val dialog = Dialog(activity)
+            // Setzen Sie das Layout für den Dialog
+            dialog.setContentView(R.layout.dialog_settings)
+            // Zeigen Sie den Dialog an
+            dialog.show()
+        }
+
+
+        // Animation von Set Button starten
         settingsButton.startAnimation(setbuttonanimation)
+
+
 
         // Finden Sie den addButton und setzen Sie den OnClickListener
         val addButton = activity.findViewById<ImageButton>(R.id.addButton)
