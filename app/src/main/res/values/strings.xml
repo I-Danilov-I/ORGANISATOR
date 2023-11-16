@@ -3,4 +3,6 @@
     <string name="titel_text">ORGANISATOR</string>
     <string name="einstellungs_button_beschreibung">Einstellungs Button</string>
     <string name="eingabeTextBeschreibung">Enter notize here:</string>
+    <string name="einstellungen_titel_fester">Einstellungen</string>
+    <string name="audio">Audio</string>
 </resources>

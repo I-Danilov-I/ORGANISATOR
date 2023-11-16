@@ -5,17 +5,16 @@
     <color name="white">#FFFFFFFF</color>
 
     // App Fabren
-    <color name="colorPrimary">@color/black</color>
+    <color name="colorPrimary">@color/colorAccent</color>
     <color name="colorPrimaryDark">@color/black</color>
     <color name="colorAccent">#00FF99</color>
 
     // Titel Text
-    <color name="colorTitelText">#C2EFE9</color>
-    <color name="colorTitelSchatten">#00EC1D</color>
+    <color name="colorTitelText">#DCD5C2</color>
+    <color name="colorTitelSchatten">#000000</color>
 
     // Listeneinträge
-    <color name="colorTextListe">@color/colorTitelSchatten</color>
-
+    <color name="colorTextListe">@color/colorAccent</color>
 
     // Eingabe Feld
     <color name="colorEingabeText">#1AFF00</color>

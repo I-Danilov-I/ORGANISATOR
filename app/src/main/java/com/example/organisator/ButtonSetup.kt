@@ -2,7 +2,7 @@
 package com.example.organisator
 
 import android.app.Dialog
-import android.content.Intent
+
 import android.view.animation.AnimationUtils
 import android.widget.EditText
 import android.widget.ImageButton
