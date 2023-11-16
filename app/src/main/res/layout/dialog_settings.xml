@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -8,25 +9,30 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Einstellungen"
+        android:text="@string/einstellungen"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Switch
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Einstellung 1" />
+        android:minHeight="48dp"
+        android:text="@string/einstellung_1"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Switch
         android:id="@+id/switch2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Einstellung 2" />
+        android:minHeight="48dp"
+        android:text="@string/einstellung_2"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Button
-        android:id="@+id/closeButton"
+        android:id="@+id/closeButtonDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Schließen" />
+        android:text="@string/schlie_en"
+        android:textColor="#616161" />
 
 </LinearLayout>

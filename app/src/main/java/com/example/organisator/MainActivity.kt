@@ -2,7 +2,9 @@
 package com.example.organisator
 
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 // Definieren Sie die MainActivity-Klasse, die von AppCompatActivity erbt
@@ -14,13 +16,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var listDataManager: ListDataManager
     private lateinit var soundManager: SoundManager  // Deklarieren Sie soundManager hier
 
+
     // In Ihrer MainActivity
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
-
 
         // Erstellen Sie eine Instanz von ListDataManager und SoundManager
         listDataManager = ListDataManager(this)
@@ -45,9 +45,6 @@ class MainActivity : AppCompatActivity() {
         // Benutzer fargen ob Benachritugung ativieren
         val notificationDialogManager = NotificationManager(this)
         notificationDialogManager.showNotificationSettingsDialog()
-
-        // Test Benachritigung absenden
-        // TestNotificationManager(this).sendTestNotification()
 
         // Tägliche Benachrichtigung
         NotificationManager(this).setupDailyNotification()

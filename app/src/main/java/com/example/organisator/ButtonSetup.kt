@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.ArrayAdapter
+import android.widget.Button
 
 
 class ButtonSetup(private val activity: AppCompatActivity,
@@ -25,9 +26,22 @@ class ButtonSetup(private val activity: AppCompatActivity,
             val dialog = Dialog(activity)
             // Setzen Sie das Layout für den Dialog
             dialog.setContentView(R.layout.dialog_settings)
+
+
+            // Finden Sie den closeButton im Dialog und setzen Sie einen OnClickListener
+            val closeButton = dialog.findViewById<Button>(R.id.closeButtonDialog)
+            closeButton.setOnClickListener {
+                dialog.dismiss()
+            }
+
+
             // Zeigen Sie den Dialog an
             dialog.show()
+
         }
+
+
+
 
 
         // Animation von Set Button starten
