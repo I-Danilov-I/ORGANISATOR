@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         // Erstellen Sie eine Instanz von ListDataManager und SoundManager
         listDataManager = ListDataManager(this)
         soundManager = SoundManager(this)  // Erstellen Sie eine Instanz von SoundManager
@@ -46,6 +47,9 @@ class MainActivity : AppCompatActivity() {
 
         // Tägliche Benachrichtigung
         NotificationManager(this).setupDailyNotification()
+
+        // Laden Sie den Zustand des Audios, wenn die App gestartet wird
+        soundManager.loadAudioStatus()
     }
 
     // Überschreiben Sie die onPause-Methode, um die Liste zu speichern, wenn die App pausiert wird
