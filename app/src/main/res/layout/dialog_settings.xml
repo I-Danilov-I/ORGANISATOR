@@ -13,11 +13,11 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/dialog_switch_audio_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="48dp"
-        android:text="@string/einstellung_1"
+        android:text="@string/SwitchAudioName"
         tools:ignore="UseSwitchCompatOrMaterialXml,VisualLintButtonSize" />
 
     <Switch
@@ -29,10 +29,10 @@
         tools:ignore="UseSwitchCompatOrMaterialXml,VisualLintButtonSize" />
 
     <Button
-        android:id="@+id/closeButtonDialog"
+        android:id="@+id/dialog_button_close_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/schlie_en"
+        android:text="@string/DialogCloseButtonName"
         android:textColor="#616161"
         tools:ignore="VisualLintButtonSize" />
 

@@ -22,7 +22,7 @@ class SettingsButtonManager(private val activity: AppCompatActivity, private val
             dialog.setContentView(R.layout.dialog_settings)
 
             // Finden Sie den audioSwitch im Dialog und setzen Sie einen OnCheckedChangeListener
-            val audioSwitch = dialog.findViewById<Switch>(R.id.switch1)
+            val audioSwitch = dialog.findViewById<Switch>(R.id.dialog_switch_audio_id)
             audioSwitch.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) {
                     // Audio einschalten
@@ -43,7 +43,7 @@ class SettingsButtonManager(private val activity: AppCompatActivity, private val
             audioSwitch.isChecked = audioStatus
 
             // Finden Sie den closeButton im Dialog und setzen Sie einen OnClickListener
-            val closeButton = dialog.findViewById<Button>(R.id.closeButtonDialog)
+            val closeButton = dialog.findViewById<Button>(R.id.dialog_button_close_id)
             closeButton.setOnClickListener {
                 dialog.dismiss()
             }
