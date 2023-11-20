@@ -4,9 +4,8 @@
     <string name="einstellungs_button_beschreibung">Einstellungs Button</string>
     <string name="eingabeTextBeschreibung">Enter notize here:</string>
     <string name="einstellungen_titel_fester">Einstellungen</string>
-    <string name="audio">Audio</string>
     <string name="einstellungen">Einstellungen</string>
-    <string name="einstellung_1">Einstellung 1</string>
+    <string name="einstellung_1">Audio</string>
     <string name="einstellung_2">Einstellung 2</string>
     <string name="schlie_en">Schließen</string>
 </resources>
