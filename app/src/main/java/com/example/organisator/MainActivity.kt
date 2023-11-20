@@ -2,9 +2,7 @@
 package com.example.organisator
 
 import android.os.Bundle
-import android.view.View
 import android.widget.ArrayAdapter
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 // Definieren Sie die MainActivity-Klasse, die von AppCompatActivity erbt
