@@ -1,6 +1,7 @@
 // SettingsButtonManager.kt
 package com.example.organisator
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Context
 import android.view.animation.AnimationUtils
@@ -10,6 +11,7 @@ import android.widget.Switch
 import androidx.appcompat.app.AppCompatActivity
 
 class SettingsButtonManager(private val activity: AppCompatActivity, private val soundManager: SoundManager) {
+    @SuppressLint("UseSwitchCompatOrMaterialCode")
     fun setupSettingsButton() {
         val setbuttonanimation = AnimationUtils.loadAnimation(activity, R.anim.set_button)
 
